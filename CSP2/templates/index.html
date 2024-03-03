@@ -1,0 +1,342 @@
+
+<!doctype html>
+<html>
+
+<style>
+    *{
+   box-sizing: border-box;
+   margin: 0px;
+   
+}
+form {
+    margin: auto;
+    width: 35%;
+    background-color:#95befe;
+    border:4px solid #0062d1;
+    height:500px;
+    width:500px;
+    padding:20px;
+    border-radius: 12px;;
+    color:#0f0a5e;
+    font-weight: bold;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin:10px;
+    border-radius: 8px;
+}
+.submit-btn{
+    height: 40px;
+    width:150px;
+    border:2px solid #0f0a5e;
+    color:#95befe;
+    background-color:#0062d1;
+    border-radius: 12px;
+    margin:20px;
+}
+fieldset{
+    border-style: none;
+}
+.drinkornot{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+h1{
+    align-items: center;
+    justify-content: center;
+    color:#0f0a5e;
+    font-weight: bold;
+    margin: 5px;
+    padding:10px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    text-align: center;
+    background-repeat:no-repeat ;
+}
+
+nav ul li{
+    display:inline;
+    padding:10px;
+}
+nav{
+    background-color: aqua;
+    padding:10px;
+}
+nav ul li a{
+    color:#93ab39;
+    padding:2px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration:underline;
+    
+}
+nav ul li a:hover{
+    background-color:#95befe;
+    padding:10px;
+}
+.result{
+    margin-top: 30px;
+    margin-right:30px;
+    font-size: 35px;
+    font-weight: bold;
+    color:#0f0a5e;
+    
+}
+.home-image{
+    height: 100%;
+    width: 100vw;
+    margin: 0px;
+}
+.drink-image{
+   height:700px;
+   width:700px;
+}
+#Home{
+    
+}
+#Tips{
+    margin-top:10px;
+    margin-left:30px;
+    margin-right: 30px;
+    margin-bottom:10px;
+    padding:20px;
+}
+#Tips h1{
+    font-weight: bold;
+    color:#0f0a5e;
+    text-align: left;
+}
+#Location h1{
+    font-weight: bold;
+    color:#0f0a5e;
+    text-align: left;
+}
+#Location{
+    margin-top:10px;
+    margin-left:30px;
+    margin-right: 30px;
+    margin-bottom:10px;
+    padding:20px;
+}
+#Tips div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+#Device h2{
+    font-weight: bold;
+    color:#0f0a5e;
+    text-align: left;
+}
+#Device{
+    margin-top:10px;
+    margin-left:30px;
+    margin-right: 30px;
+    margin-bottom:10px;
+    padding:20px;
+}
+#About h2{
+    font-weight: bold;
+    color:#0f0a5e;
+    text-align: left;
+}
+#About p{
+  
+    color:#0f0a5e;
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 12px;
+}
+#About{
+    margin-top:10px;
+    margin-left:30px;
+    margin-right: 30px;
+    margin-bottom:10px;
+    padding:20px;
+}
+#About img{
+    border-radius: 150px;
+    height:250px;
+    width:250px;
+    margin:20px;
+}
+#About div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+   
+}
+.footer{
+    background-color: #93ab39;
+    color:#0f0a5e;
+    padding:12px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#Water img{
+    height:300px;
+    width:500px;
+    margin:20px;
+    border-radius: 20px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+</style>
+<head>
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Circle-icons-water.svg/2048px-Circle-icons-water.svg.png">
+    <title>Water quality Prediction Model</title>
+  
+
+</head>
+<body>
+    
+    <h1>CREATING AWARENESS REGARDING BEST WATER RESOURCES AVAILABLE IN VILLAGE</h1>
+    <nav>
+     <ul>
+        <li><a href=#Home>Home</a></li>
+        <li><a href=#Drinkornot>Drinkornot</a></li>
+        <li><a href=#Water>Water</a></li>
+        <li><a href=#Location>Location</a></li>
+        <li><a href=#Device>Device</a></li>
+        <li><a href=#About>About</a></li>
+      </ul>
+      </nav>
+   
+    <section id="Home">
+        <img class="home-image" src='https://res.cloudinary.com/drzlum1yv/image/upload/v1709402777/SAVE_DROP_vd7mcw.jpg'>
+        <p></p>
+    </section>
+    <section id="Drinkornot">
+        <div class="drinkornot">
+            <img class="drink-image" src="https://img.freepik.com/free-vector/hydratation-concept-illustration_114360-8804.jpg?t=st=1709401091~exp=1709404691~hmac=280fa27a65aaae090ae77b23ee326b382b1a9104f40fbbf270cf2e59902de2b8&w=900">
+            <div>
+<form action='/predict' method="post" >
+    <fieldset>
+       
+        PH:
+        <br>
+        <input name="ph" type="number" required>
+        <br>
+        <br>
+        Temperature:
+        <br>
+        <input name="temperature" type="number" required>
+        <br>
+        
+        <br> Turbidity:
+        <br>
+        <input name="turbidity" type="number" required>
+        <br>
+        <br>
+        DissolvedOxygen:
+        <br>
+        <input name="dissolved_oxygen" type="number" required>
+        <br>
+        <br>Conductivity:
+        <br>
+        <input name="conductivity" type="number" required>
+        <br>
+        <br>
+        <input class="submit-btn" type="submit">
+    </fieldset>
+</form>
+<br>
+</div>
+</div>
+<div class="result">
+    {{pred}}
+</div>
+
+</section>
+<section id="Water">
+  <h1>Sources of water </h1>
+  <div class="main">
+    <div class="cont">
+        <img src="https://sensorex.com/wp-content/uploads/2021/05/lake-1802337_1280-e1622517813917.jpg">
+        <h3> Surface water</h3>
+    </div>
+    <div class="cont">
+        <img src="https://www.nasa.gov/wp-content/uploads/2022/04/1-groundwater-final-16_0.jpg">
+        <h3>Ground Water</h3>
+    </div>
+    <div class="cont">
+        <img src="https://w.forfun.com/fetch/f6/f6fd4dc74497ed06d4b936bbc4e2af2d.jpeg">
+        <h3>Frozen Water</h3>
+    </div>
+  </div>
+  <h1>Water Campaigns</h1>
+  <div class="main">
+    <div class="cont">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/885/476/small_2x/earth-in-water-drop-shape-dropping-on-the-ground-background-environment-and-world-savings-concept-digital-art-illustration-generative-ai-photo.jpg">
+        <h3>Water for Life</h3>
+    </div>
+    <div class="cont">
+        <img src="https://weathersource.com/wp-content/uploads/2021/02/AdobeStock_128873182-sm.jpg">
+        <h3>Water for Climate</h3>
+    </div>
+    <div class="cont">
+        <img src="https://c0.wallpaperflare.com/preview/465/580/28/stick-agriculture-agricultural-human.jpg">
+        <h3>Water for Agriculture</h3>
+    </div>
+    <div class="cont">
+        <img src="https://w0.peakpx.com/wallpaper/54/426/HD-wallpaper-barrage-dam-colorful-lights-water-travel.jpg">
+        <h3>Water for Power Generation</h3>
+    </div>
+  </div>
+  <h1>Sources of Fresh Water</h1>
+  <div class="main">
+    <div class="cont">
+        <img src="https://t3.ftcdn.net/jpg/04/53/99/58/360_F_453995814_jkqPlDoEV47Pey4bxJ2mWfXLuOaNTt1J.jpg">
+        <h3>Rivers</h3>
+    </div>
+    <div class="cont">
+        <img src="https://w.ndtvimg.com/sites/3/2019/04/12131446/underground-water-depletion.jpg">
+        <h3>Ground Water</h3>
+    </div>
+    <div class="cont">
+        <img src="https://cdn.hswstatic.com/gif/Frozen-water-tower.jpg">
+        <h3>Water Tanks</h3>
+    </div>
+  </div>
+</section>
+<section id="Location">
+   <h1>Location............</h1>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.332471302812!2d81.60029289868373!3d16.444100629437724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37d41db6ecdd8d%3A0xd9d76b13e4735bb2!2sSerepalem%2C%20Andhra%20Pradesh%20534281!5e0!3m2!1sen!2sin!4v1709480397325!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<section id="Device">
+  <h2>The IOT device used to measure the water quality..... </h2>
+  <img src="https://how2electronics.com/wp-content/uploads/2022/07/IoT-Based-Drinking-Water-Quality-Monitoring-with-ESP32.jpg" height="300">
+</section>
+<section id="About">
+   <h2>Memebers of the project</h2>
+   <p>We are from 3rd CSE-B</p>
+   <div>
+    <img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709485341/WhatsApp_Image_2024-03-03_at_22.30.47_caed40a0_y934dg.jpg">
+    <img src="https://media.licdn.com/dms/image/D4D03AQHYD87wRU-WrA/profile-displayphoto-shrink_800_800/0/1676024970329?e=2147483647&v=beta&t=LQoHPHynxZnjStNx2wvuED-OgcrsP6JAOZYr4JwRK0c">
+    <img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709484478/WhatsApp_Image_2024-03-03_at_21.49.05_4eb5f98c_r1qzoo.jpg">
+    <img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709484479/WhatsApp_Image_2024-03-03_at_21.49.16_50a20dc7_is6zxr.jpg">
+    <img src="https://media.licdn.com/dms/image/D4D03AQEgF-1wpUZ1LQ/profile-displayphoto-shrink_800_800/0/1676025210486?e=2147483647&v=beta&t=mzl2gMwepndDcD9L0hmFoD3I0PZfAeeJ1BCbeG8V_tw">
+   </div>
+</section>
+<div class="footer">
+    <p>@ This website is developed as part of our community service project</p>
+</div>
+</body>
+</html>
