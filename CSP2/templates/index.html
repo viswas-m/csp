@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html>
 
@@ -7,6 +8,10 @@
    box-sizing: border-box;
    margin: 0px;
    
+}
+h2{
+    color: red;
+    font-weight: bold;
 }
 form {
     margin: auto;
@@ -86,7 +91,10 @@ nav ul li a:hover{
     margin-right:30px;
     font-size: 35px;
     font-weight: bold;
-    color:#0f0a5e;
+    color:red;
+    border:3px solid #0062d1;
+    margin: 20px;
+    padding: 10px;
     
 }
 .home-image{
@@ -100,6 +108,11 @@ nav ul li a:hover{
 }
 #Home{
     
+}
+#h22{
+    text-align: center;
+    color:orangered;
+
 }
 #Tips{
     margin-top:10px;
@@ -164,9 +177,9 @@ nav ul li a:hover{
     padding:20px;
 }
 #About img{
-    border-radius: 150px;
-    height:250px;
-    width:250px;
+    border-radius: 100px;
+    height:130px;
+    width:130px;
     margin:20px;
 }
 #About div{
@@ -175,7 +188,16 @@ nav ul li a:hover{
     justify-content: space-around;
     padding: 20px;
     flex-wrap: wrap;
-   
+}
+#About .imgcont{
+    position: relative;
+}
+#About h3{
+    color:rgb(232, 24, 131);
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
 .footer{
     background-color: #93ab39;
@@ -184,19 +206,85 @@ nav ul li a:hover{
     width: 100%;
     font-size: 20px;
     font-weight: bold;
+    height: 20%;
 
 }
-#Water img{
-    height:300px;
-    width:500px;
-    margin:20px;
-    border-radius: 20px;
-}
+
 .main{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+}
+.Lo{
+    color: red;
+}
+.IOT1{
+    text-align: left;
+    color:#93ab39;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 25px;
+    position: relative;
+    font-family:'Times New Roman', Times, serif;
+}
+.IOT{
+    color:#0062d1;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 25px;
+    position:absolute;
+    
+}
+#IOT{
+    margin-top: -180px;
+}
+.cont img{
+    height:400px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 12px;
+
+}
+.cont{
+    
+    width: 500px;
+    padding: 10px;
+    border:1px solid #0f0a5e;
+    border-radius: 12px;
+    margin: 12px;
+}
+.ro{
+    padding: 20px;
+    border:1px solid #0f0a5e;
+    border-radius: 12px;
+    margin: 12px;
+}
+.para{
+    color: black;
+    font-weight:200;
+    font-size: 20px;
+}
+.ro p{
+    color: black;
+    font-weight:200;
+    font-size: 20px;
+}
+.cont p{
+    color: black;
+    font-weight:200;
+    font-size: 20px;
+}
+.cont h3{
+    color: #0f0a5e;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+}
+.banner{
+    width: 100vw;
+    height: 40vh;
 }
 </style>
 <head>
@@ -207,7 +295,8 @@ nav ul li a:hover{
 </head>
 <body>
     
-    <h1>CREATING AWARENESS REGARDING BEST WATER RESOURCES AVAILABLE IN VILLAGE</h1>
+    <h1>Promoting Sustainable Drinking Water Sources in Rural Areas
+    </h1>
     <nav>
      <ul>
         <li><a href=#Home>Home</a></li>
@@ -223,7 +312,8 @@ nav ul li a:hover{
         <img class="home-image" src='https://res.cloudinary.com/drzlum1yv/image/upload/v1709402777/SAVE_DROP_vd7mcw.jpg'>
         <p></p>
     </section>
-    <section id="Drinkornot">
+    <section id="Drinkornot"><br><br>
+        <h1 id="h22">If you want to check whether the water is drink or not please enter the parameters below fieldset</h1>
         <div class="drinkornot">
             <img class="drink-image" src="https://img.freepik.com/free-vector/hydratation-concept-illustration_114360-8804.jpg?t=st=1709401091~exp=1709404691~hmac=280fa27a65aaae090ae77b23ee326b382b1a9104f40fbbf270cf2e59902de2b8&w=900">
             <div>
@@ -232,26 +322,26 @@ nav ul li a:hover{
        
         PH:
         <br>
-        <input name="ph" type="number" required>
+        <input name="ph" required>
         <br>
         <br>
         Temperature:
         <br>
-        <input name="temperature" type="number" required>
+        <input name="temperature" required>
         <br>
         
         <br> Turbidity:
         <br>
-        <input name="turbidity" type="number" required>
+        <input name="turbidity" required>
         <br>
         <br>
         DissolvedOxygen:
         <br>
-        <input name="dissolved_oxygen" type="number" required>
+        <input name="dissolved_oxygen" required>
         <br>
         <br>Conductivity:
         <br>
-        <input name="conductivity" type="number" required>
+        <input name="conductivity" required>
         <br>
         <br>
         <input class="submit-btn" type="submit">
@@ -266,75 +356,105 @@ nav ul li a:hover{
 
 </section>
 <section id="Water">
-  <h1>Sources of water </h1>
+  
+  
+    <h1>Sources of Drinking Water in the Village</h1>
+    <div class="main">
+      
+      <div class="cont">
+          <img src="https://w.ndtvimg.com/sites/3/2019/04/12131446/underground-water-depletion.jpg">
+          <h3>Ground Water</h3>
+      </div>
+      <div class="cont">
+          <img src="https://cdn.hswstatic.com/gif/Frozen-water-tower.jpg">
+          <h3>Water Tanks</h3>
+      </div>
+  
+    </div>
+  <h2>***Here the Ground water is not suitable for Drinking because Its Salty***</h2>
+  <h1>Procedures to purify water</h1>
   <div class="main">
+  <div class="cont">
+      <h3>Boiling</h3>
+      <img src="https://static.vecteezy.com/system/resources/previews/000/681/980/non_2x/stainless-steel-pot-with-boiling-water-on-gas-stove.jpg" />
+      <p>A common method that kills bacteria, viruses, and other pathogens.Bring the water to a rolling boil for 3-5 minutes. Let cool before drinking.</p>
+  </div>
+  <div class="cont">
+      <h3>Chlorination</h3>
+      <img src="https://carewater.solutions/wp-content/uploads/2022/02/%D9%83%D9%84%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D8%A1-scaled.jpg" />
+      <p>This involves adding a small amount of chlorine to the water, which kills most bacteria and viruses. Chlorination is an older, yet effective technique often used in emergencies when other methods are not readily available2. </p>
+  </div>
+  <div class="cont">
+      <h3>Filtration</h3>
+      <img src="https://byjus-answer-creation.s3.amazonaws.com/uploads/image.png_img_upload_solution_2022-06-13%2017:40:47.233488.png" />
+      <p> This involves passing water through a filter to remove impurities. There are many types of water filters available, including activated carbon filters and ceramic filters</p>
+     
+  </div>
+  </div>
+  <br />
+  <h1>Best Budget Water purifiers </h1>
+  <div class="main">
+    
+    
     <div class="cont">
-        <img src="https://sensorex.com/wp-content/uploads/2021/05/lake-1802337_1280-e1622517813917.jpg">
-        <h3> Surface water</h3>
+        <h3>Simple Steel water Purifier</h3>
+        <img src="https://m.media-amazon.com/images/I/51dGBrdXfNL._SX342_SY445_QL70_FMwebp_.jpg">
+        <p>price:500-1000</p>
+        <a href="https://www.amazon.in/16-Ltr-Water-Gravity-Filter/dp/B0CKJ3ZG8S/ref=asc_df_B0CKJ3ZG8S/?tag=googleshopdes-21&linkCode=df0&hvadid=666289414465&hvpos=&hvnetw=g&hvrand=15786969050988550820&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9152663&hvtargid=pla-2457577005512&mcid=48c5e096e6d838878869c7f4be20fef2&th=1">Link</a>
     </div>
+    
     <div class="cont">
-        <img src="https://www.nasa.gov/wp-content/uploads/2022/04/1-groundwater-final-16_0.jpg">
-        <h3>Ground Water</h3>
-    </div>
-    <div class="cont">
-        <img src="https://w.forfun.com/fetch/f6/f6fd4dc74497ed06d4b936bbc4e2af2d.jpeg">
-        <h3>Frozen Water</h3>
+        <h3>Tata Swach 445666 12 L RO Water Purifier</h3>
+        <img src="https://rukminim2.flixcart.com/image/832/832/xif0q/water-purifier/m/v/x/445666-tataswach-original-imagg5g83gkdefbn.jpeg?q=70&crop=false">
+        <p>price:1000</p>
+        <a href="https://www.flipkart.com/tata-swach-445666-12-l-ro-water-purifier/p/itm9b47b14d9decc?pid=WAPGG5G9ZEURE7GZ&lid=LSTWAPGG5G9ZEURE7GZTH1VYH&marketplace=FLIPKART&cmpid=content_water-purifier_20254919511_x_8965229628_gmc_pla&tgi=sem,1,G,11214002,x,,,,,,,c,,,,,,,&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA-oh__V5fiXzv4bPm5G56wnHLWdDQjBEdgTs3kkNIsFf34d6cGbrXhoCQJIQAvD_BwE">Link</a>
     </div>
   </div>
-  <h1>Water Campaigns</h1>
-  <div class="main">
-    <div class="cont">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/885/476/small_2x/earth-in-water-drop-shape-dropping-on-the-ground-background-environment-and-world-savings-concept-digital-art-illustration-generative-ai-photo.jpg">
-        <h3>Water for Life</h3>
-    </div>
-    <div class="cont">
-        <img src="https://weathersource.com/wp-content/uploads/2021/02/AdobeStock_128873182-sm.jpg">
-        <h3>Water for Climate</h3>
-    </div>
-    <div class="cont">
-        <img src="https://c0.wallpaperflare.com/preview/465/580/28/stick-agriculture-agricultural-human.jpg">
-        <h3>Water for Agriculture</h3>
-    </div>
-    <div class="cont">
-        <img src="https://w0.peakpx.com/wallpaper/54/426/HD-wallpaper-barrage-dam-colorful-lights-water-travel.jpg">
-        <h3>Water for Power Generation</h3>
-    </div>
-  </div>
-  <h1>Sources of Fresh Water</h1>
-  <div class="main">
-    <div class="cont">
-        <img src="https://t3.ftcdn.net/jpg/04/53/99/58/360_F_453995814_jkqPlDoEV47Pey4bxJ2mWfXLuOaNTt1J.jpg">
-        <h3>Rivers</h3>
-    </div>
-    <div class="cont">
-        <img src="https://w.ndtvimg.com/sites/3/2019/04/12131446/underground-water-depletion.jpg">
-        <h3>Ground Water</h3>
-    </div>
-    <div class="cont">
-        <img src="https://cdn.hswstatic.com/gif/Frozen-water-tower.jpg">
-        <h3>Water Tanks</h3>
-    </div>
+  <h1>What If ,if there is a RO Water Plant..?</h1>
+  <p class="para">We notice that,In this village there is no RO Water Plant is there.<br/>It was closed few years ago .So people in this village are went to Mogulthor for buying and bringing 
+    the drinking water. <br/>They Travelled about 4 km to buy the drinking water.So if they installed again a new RO plant it will be useful to the most of the people...
+  </p>
+  <br />
+  <div class="ro">
+  <h2>RO Water Plant</h2>
+  <img src="https://5.imimg.com/data5/VP/CR/LI/SELLER-25550021/water-softening-plant-500x500.jpg" />
+  <p>A Reverse Osmosis (RO) Water Plant is a facility that purifies water. The process involves pre-treatment of water, pressurization, and then forcing the water through a semi-permeable membrane. This membrane allows water molecules to pass through but blocks larger molecules like contaminants and dissolved salts. The purified water is then collected for use. However, the process also produces waste water containing the concentrated contaminants.</p>
   </div>
 </section>
 <section id="Location">
    <h1>Location............</h1>
+   <h3 class="Lo">This is the village of Serepalem, Mogaltur mandal, West godavari district, Andhra pradesh...</h3><br>
    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.332471302812!2d81.60029289868373!3d16.444100629437724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37d41db6ecdd8d%3A0xd9d76b13e4735bb2!2sSerepalem%2C%20Andhra%20Pradesh%20534281!5e0!3m2!1sen!2sin!4v1709480397325!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <section id="Device">
   <h2>The IOT device used to measure the water quality..... </h2>
-  <img src="https://how2electronics.com/wp-content/uploads/2022/07/IoT-Based-Drinking-Water-Quality-Monitoring-with-ESP32.jpg" height="300">
+  <h3 class="IOT">IOT Components:</h3>
+  <h4 class="IOT1">
+    <ul>
+        <li>Arduino uno</li>
+        <li>PH sensor</li>
+        <li>Temperature sensor</li>
+        <li>D.O sensor</li>
+        <li>Hardness sensor</li>
+        <li>Turbidity sensor</li>
+        <li>Conductivity sensor</li>
+        <li>Signal pins</li>
+    </ul>
+  </h4>
+  <img id="IOT" src="https://how2electronics.com/wp-content/uploads/2022/07/IoT-Based-Drinking-Water-Quality-Monitoring-with-ESP32.jpg" height="300">
 </section>
 <section id="About">
    <h2>Memebers of the project</h2>
    <p>We are from 3rd CSE-B</p>
-   <div>
-    <img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709485341/WhatsApp_Image_2024-03-03_at_22.30.47_caed40a0_y934dg.jpg">
-    <img src="https://media.licdn.com/dms/image/D4D03AQHYD87wRU-WrA/profile-displayphoto-shrink_800_800/0/1676024970329?e=2147483647&v=beta&t=LQoHPHynxZnjStNx2wvuED-OgcrsP6JAOZYr4JwRK0c">
-    <img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709484478/WhatsApp_Image_2024-03-03_at_21.49.05_4eb5f98c_r1qzoo.jpg">
-    <img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709484479/WhatsApp_Image_2024-03-03_at_21.49.16_50a20dc7_is6zxr.jpg">
-    <img src="https://media.licdn.com/dms/image/D4D03AQEgF-1wpUZ1LQ/profile-displayphoto-shrink_800_800/0/1676025210486?e=2147483647&v=beta&t=mzl2gMwepndDcD9L0hmFoD3I0PZfAeeJ1BCbeG8V_tw">
+   <div class="imgcont">
+    <div><img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709485341/WhatsApp_Image_2024-03-03_at_22.30.47_caed40a0_y934dg.jpg"><h3>Viswas Meka</h3></div>
+    <div><img src="https://media.licdn.com/dms/image/D4D03AQHYD87wRU-WrA/profile-displayphoto-shrink_800_800/0/1676024970329?e=2147483647&v=beta&t=LQoHPHynxZnjStNx2wvuED-OgcrsP6JAOZYr4JwRK0c"><h3>Lakshmanudu Kathula</h3></div>
+    <div><img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709484478/WhatsApp_Image_2024-03-03_at_21.49.05_4eb5f98c_r1qzoo.jpg"><h3>Ramu Kathula</h3></div>
+    <div><img src="https://res.cloudinary.com/drzlum1yv/image/upload/v1709484479/WhatsApp_Image_2024-03-03_at_21.49.16_50a20dc7_is6zxr.jpg"><h3>Surya Kedarsetti</h3></div>
+    <div><img src="https://media.licdn.com/dms/image/D4D03AQEgF-1wpUZ1LQ/profile-displayphoto-shrink_800_800/0/1676025210486?e=2147483647&v=beta&t=mzl2gMwepndDcD9L0hmFoD3I0PZfAeeJ1BCbeG8V_tw"><h3>Phani Medapati</h3></div>
    </div>
 </section>
+<img class="banner" src="https://res.cloudinary.com/drzlum1yv/image/upload/v1711284065/Clean_water_equals_healthy_life_for_them_and_us_c6bw9m.png" />
 <div class="footer">
     <p>@ This website is developed as part of our community service project</p>
 </div>
